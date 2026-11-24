@@ -13,6 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://xn--hy1b53dbte3s8a.com/">
 <link rel="canonical" href="https://xn--hy1b53dbte3s8a.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23F5F1E8'/%3E%3Ctext x='32' y='47' font-family='Didot,Georgia,serif' font-style='italic' font-size='44' text-anchor='middle' fill='%231E2620'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
@@ -138,7 +139,9 @@
   .pkg .sub{font-size:14px;color:var(--ink-soft);margin:6px 0 22px}
   .pkg ul{list-style:none;font-size:15px}
   .pkg li{padding:9px 0;border-bottom:1px solid var(--line)}
+  .pkg li:last-child{border-bottom:0}
   .included{margin-top:48px;padding:28px 32px;background:var(--paper-2);font-size:15px;color:var(--ink-soft);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+  .nb{white-space:nowrap}
   .included strong{color:var(--ink);font-weight:500}
 
   /* 갤러리 */
@@ -148,11 +151,12 @@
   .strip figure{aspect-ratio:3/4}
 
   /* 안내 */
-  .info{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,120px);border-top:1px solid var(--line)}
-  .info dl{display:grid;grid-template-columns:110px 1fr;row-gap:18px;margin-top:36px;font-size:15px}
+  .info{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,120px);border-top:1px solid var(--line);padding-top:clamp(40px,5vw,72px)}
+  .info dl{display:grid;grid-template-columns:110px 1fr;row-gap:18px;margin-top:0;font-size:15px}
   .info dt{color:var(--ink-soft)}
   .times{list-style:none}
-  .times li{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:6px 0}
+  .times li{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:0 0 8px}
+  .times li + li{padding-top:8px}
   .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:40px}
 
   /* 마지막 */
@@ -342,7 +346,7 @@
     </div>
   </div>
   <div class="included reveal">
-    <span><strong>모든 패키지 포함</strong> · 대관 · 예식 전체 디렉팅 · 음향 · 플라워 연출 · 웰컴드링크 · 테이블과 의자 · 파라솔 · 우천 용품 · 접수대 물품 · 주차 안내</span>
+    <span><strong>모든 패키지 포함</strong> · <span class="nb">대관</span> · <span class="nb">예식 전체 디렉팅</span> · <span class="nb">음향</span> · <span class="nb">플라워 연출</span> · <span class="nb">웰컴드링크</span> · <span class="nb">테이블과 의자</span> · <span class="nb">파라솔</span> · <span class="nb">우천 용품</span> · <span class="nb">접수대 물품</span> · <span class="nb">주차 안내</span></span>
     <span>금액과 옵션은 상담에서 안내해 드립니다.</span>
   </div>
 </section>
@@ -384,7 +388,7 @@
         </dd>
         <dt>상담 시간</dt><dd>12:00 – 19:00 · 월, 화 휴무</dd>
         <dt>예약</dt><dd>2027 예약 중</dd>
-        <dt>주소</dt><dd>대전광역시 유성구 하기로56번길 110-10<br>(하기동 146-6)<br><a href="https://map.naver.com/p/search/%EB%8C%80%EC%A0%84%20%EC%9C%A0%EC%84%B1%EA%B5%AC%20%ED%95%98%EA%B8%B0%EB%A1%9C56%EB%B2%88%EA%B8%B8%20110-10" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:4px">네이버 지도에서 보기</a></dd>
+        <dt>주소</dt><dd>대전광역시 유성구 하기로56번길 110-10<br>(하기동 146-6)<br><a href="https://map.naver.com/p/search/%EB%8C%80%EC%A0%84%20%EC%9C%A0%EC%84%B1%EA%B5%AC%20%ED%95%98%EA%B8%B0%EB%A1%9C56%EB%B2%88%EA%B8%B8%20110-10" target="_blank" rel="noopener" style="display:inline-block;padding:8px 0;text-decoration:underline;text-underline-offset:4px">네이버 지도에서 보기</a></dd>
       </dl>
     </div>
   </div>
@@ -401,7 +405,7 @@
 
 <footer>
   <span class="logo">Mille de fleur</span>
-  <span>(주) 밀드플레 · 대전광역시 유성구 하기로56번길 110-10 · 카카오톡 채널 @밀드플레 · Instagram @milledefleur_</span>
+  <span>(주)밀드플레 · 대전광역시 유성구 하기로56번길 110-10 · 카카오톡 채널 @밀드플레 · Instagram @milledefleur_</span>
 </footer>
 
 <a class="float-cta kakao" id="floatCta" href="#" target="_blank" rel="noopener">카카오톡 상담 예약</a>
@@ -410,7 +414,7 @@
   // 카카오톡 채널 주소를 여기에 넣으면 모든 상담 버튼에 적용돼요. 예: https://pf.kakao.com/_xxxxxx/chat
   const KAKAO_URL = "https://pf.kakao.com/_zKkjG/chat";
   document.querySelectorAll('.kakao').forEach(a => {
-    if (KAKAO_URL) a.href = KAKAO_URL; else { a.href = '#visit'; a.removeAttribute('target'); }
+    if (KAKAO_URL) { a.href = KAKAO_URL; a.target = '_blank'; a.rel = 'noopener'; } else { a.href = '#visit'; a.removeAttribute('target'); }
   });
 
   const nav = document.getElementById('nav');
