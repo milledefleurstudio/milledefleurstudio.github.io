@@ -13,11 +13,16 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://milledefleur.com/">
 <link rel="canonical" href="https://milledefleur.com/">
+<link rel="alternate" hreflang="ko" href="https://milledefleur.com/">
+<link rel="alternate" hreflang="en" href="https://milledefleur.com/en.html">
+<link rel="alternate" hreflang="x-default" href="https://milledefleur.com/">
+<meta name="theme-color" content="#F5F1E8">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23F5F1E8'/%3E%3Ctext x='32' y='47' font-family='Didot,Georgia,serif' font-style='italic' font-size='44' text-anchor='middle' fill='%231E2620'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script>document.documentElement.classList.add("js")</script>
 <style>
   :root{
     --paper:#F5F1E8;
@@ -42,11 +47,13 @@
   /* 상단 */
   .nav{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:20px var(--gutter);color:#fff;transition:background .4s,color .4s,padding .4s}
   .nav.solid{background:rgba(245,241,232,.94);backdrop-filter:blur(8px);color:var(--ink);padding:14px var(--gutter);border-bottom:1px solid var(--line)}
-  .logo{font-family:var(--serif-en);font-size:26px;letter-spacing:.02em;font-style:italic}
+  .logo{white-space:nowrap;font-family:var(--serif-en);font-size:26px;letter-spacing:.02em;font-style:italic}
   .nav ul{display:flex;gap:34px;list-style:none;font-size:14px;letter-spacing:.04em}
   .nav ul a{opacity:.85}
   .nav ul a:hover{opacity:1}
   .nav-right{display:flex;align-items:center;gap:10px}
+  .lang{font-size:13px;letter-spacing:.04em;padding:12px 8px;white-space:nowrap}
+  .nav .btn{white-space:nowrap}
   .menu-btn{display:none;width:44px;height:44px;background:none;border:0;color:inherit;cursor:pointer;position:relative}
   .menu-btn i{position:absolute;left:10px;width:24px;height:1.5px;background:currentColor;transition:transform .3s,top .3s}
   .menu-btn i:first-child{top:17px}
@@ -92,8 +99,8 @@
   .eyebrow{font-family:var(--serif-en);font-style:italic;font-size:18px;color:var(--ink-soft);letter-spacing:.02em;margin-bottom:18px;display:block}
   h2{font-family:var(--serif-ko);font-weight:400;font-size:clamp(28px,3.6vw,46px);line-height:1.4;letter-spacing:-.01em}
   .lead{font-size:clamp(16px,1.25vw,18px);color:var(--ink-soft);max-width:34em;margin-top:28px}
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s ease}
-  .reveal.in{opacity:1;transform:none}
+  .js .reveal{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s ease}
+  .js .reveal.in{opacity:1;transform:none}
 
   /* 소개 */
   .intro{display:grid;grid-template-columns:1fr;gap:clamp(40px,7vw,120px);align-items:end}
@@ -171,6 +178,17 @@
     .closing::after{display:none}
     .closing .inner{order:1;align-items:flex-start;justify-content:center;padding:0 var(--gutter)}
   }
+  @media (min-width:640px) and (max-width:900px){
+    .style-list{grid-template-columns:repeat(3,1fr)!important}
+  }
+  @media (max-width:380px){
+    .nav .logo{font-size:22px}
+    .nav .btn{padding:9px 11px!important;font-size:12px!important}
+    .lang{padding:12px 4px}
+    .nav-right{gap:4px}
+    .closing h2{font-size:34px!important}
+    .closing p{font-size:14px!important;letter-spacing:-.02em;margin:16px 0 22px!important}
+  }
   .closing .btn{background:rgba(255,255,255,.92);color:var(--ink);border-color:transparent}
   .closing .btn:hover{background:#fff}
   .closing h2{font-family:var(--serif-en);font-style:italic;font-size:clamp(44px,7vw,96px);line-height:1}
@@ -204,13 +222,13 @@
     .style-list article{margin-bottom:28px}
     .pkg,.pkg + .pkg{padding:30px 0;border-right:0;border-bottom:1px solid var(--line)}
     .hero .meta{text-align:left}
-    .info dl{grid-template-columns:90px 1fr}
-    .float-cta{display:flex;position:fixed;left:16px;right:16px;bottom:16px;z-index:30;justify-content:center;background:var(--ink);color:var(--paper);padding:15px;font-size:15px;letter-spacing:.04em;box-shadow:0 8px 24px rgba(0,0,0,.18);transform:translateY(120%);transition:transform .4s}
-    .float-cta.show{transform:none}
+    .info dl{grid-template-columns:96px 1fr}
+    .float-cta{display:flex;position:fixed;left:16px;right:16px;bottom:16px;z-index:30;justify-content:center;background:var(--ink);color:var(--paper);padding:15px;font-size:15px;letter-spacing:.04em;box-shadow:0 8px 24px rgba(0,0,0,.18);transform:translateY(calc(100% + 40px));visibility:hidden;transition:transform .4s,visibility .4s}
+    .float-cta.show{transform:none;visibility:visible}
     footer{padding-bottom:96px}
   }
   @media (prefers-reduced-motion: reduce){
-    .reveal{opacity:1;transform:none;transition:none}
+    .js .reveal{opacity:1;transform:none;transition:none}
     .hero img{animation:none;transform:none}
   }
 </style>
@@ -227,6 +245,7 @@
     <li><a href="#visit">오시는 길</a></li>
   </ul>
   <div class="nav-right">
+    <a class="lang" href="en.html" hreflang="en" lang="en">EN</a>
     <a class="btn kakao" href="#visit">상담 예약</a>
     <button class="menu-btn" id="menuBtn" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
   </div>
@@ -240,7 +259,7 @@
     <span class="meta">대전 유성 · 하루 한 팀 · 2027 예약 중</span>
     <div><a class="btn fill kakao" href="#visit">상담 예약</a></div>
   </div>
-  <figure><img src="main.jpg" alt="소나무 숲 앞, 장미와 들풀로 채운 아치와 꽃길"></figure>
+  <figure><img src="main.jpg" fetchpriority="high" alt="소나무 숲 앞, 장미와 들풀로 채운 아치와 꽃길"></figure>
 </section>
 
 <section id="garden">
