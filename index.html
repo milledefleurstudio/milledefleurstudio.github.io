@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>밀드플레 Mille de fleur · 대전 야외웨딩 베뉴</title>
+<meta name="description" content="대전 유성 소나무 숲 곁 2,000평 잔디마당. 하루 한 팀만을 위한 야외웨딩 베뉴 밀드플레.">
+<meta property="og:title" content="밀드플레 Mille de fleur">
+<meta property="og:description" content="대전 야외웨딩만을 위한 유일한 베뉴">
+<meta property="og:image" content="https://xn--hy1b53dbte3s8a.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://xn--hy1b53dbte3s8a.com/">
+<link rel="canonical" href="https://xn--hy1b53dbte3s8a.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root{
+    --paper:#F5F1E8;
+    --paper-2:#ECE6D9;
+    --ink:#1E2620;
+    --ink-soft:#4D564F;
+    --line:#D6CFBF;
+    --pine:#2F3D33;
+    --sky:#8FA9BF;
+    --night:#14181A;
+    --serif-en:"Cormorant Garamond", "Times New Roman", serif;
+    --serif-ko:"Noto Serif KR", serif;
+    --sans:"Pretendard", -apple-system, "Apple SD Gothic Neo", sans-serif;
+    --gutter:clamp(16px, 5vw, 72px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased}
+  img{display:block;width:100%;height:100%;object-fit:cover}
+  a{color:inherit;text-decoration:none}
+
+  /* 상단 */
+  .nav{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:20px var(--gutter);color:#fff;transition:background .4s,color .4s,padding .4s}
+  .nav.solid{background:rgba(245,241,232,.94);backdrop-filter:blur(8px);color:var(--ink);padding:14px var(--gutter);border-bottom:1px solid var(--line)}
+  .logo{font-family:var(--serif-en);font-size:26px;letter-spacing:.02em;font-style:italic}
+  .nav ul{display:flex;gap:34px;list-style:none;font-size:14px;letter-spacing:.04em}
+  .nav ul a{opacity:.85}
+  .nav ul a:hover{opacity:1}
+  .nav-right{display:flex;align-items:center;gap:10px}
+  .menu-btn{display:none;width:44px;height:44px;background:none;border:0;color:inherit;cursor:pointer;position:relative}
+  .menu-btn i{position:absolute;left:10px;width:24px;height:1.5px;background:currentColor;transition:transform .3s,top .3s}
+  .menu-btn i:first-child{top:17px}
+  .menu-btn i:last-child{top:26px}
+  .menu-btn[aria-expanded="true"] i{top:21px}
+  .menu-btn[aria-expanded="true"] i:first-child{transform:rotate(45deg)}
+  .menu-btn[aria-expanded="true"] i:last-child{transform:rotate(-45deg)}
+  section[id]{scroll-margin-top:64px}
+  .btn{display:inline-flex;align-items:center;gap:10px;border:1px solid currentColor;padding:11px 22px;font-size:14px;letter-spacing:.06em;transition:background .3s,color .3s}
+  .btn:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .btn.light:hover{background:#fff;color:var(--ink);border-color:#fff}
+  .btn.fill{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .btn.fill:hover{background:var(--pine);border-color:var(--pine)}
+
+  /* 첫 화면 */
+  .hero{position:relative;height:100svh;min-height:560px;color:#fff;overflow:hidden}
+  .hero img{position:absolute;inset:0;transform:scale(1.06);animation:settle 2.4s ease-out forwards}
+  @keyframes settle{to{transform:scale(1)}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.28) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 55%,rgba(0,0,0,.45) 100%)}
+  .hero-text{position:absolute;z-index:2;left:var(--gutter);right:var(--gutter);bottom:clamp(48px,10vh,110px);display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+  .hero h1{font-family:var(--serif-en);font-weight:400;font-style:italic;font-size:clamp(54px,10vw,150px);line-height:.9;letter-spacing:-.01em}
+  .hero p{font-family:var(--serif-ko);font-weight:300;font-size:clamp(16px,1.6vw,20px);margin-top:18px;letter-spacing:.02em}
+  .hero .meta{text-align:right;font-size:13px;letter-spacing:.08em;opacity:.9;line-height:2}
+
+
+  /* 메인 */
+  .main{display:grid;grid-template-columns:1fr 1.05fr;min-height:100svh;padding:0}
+  .main .text{display:flex;flex-direction:column;justify-content:flex-end;padding:140px var(--gutter) clamp(56px,9vh,104px)}
+  .main h1{font-family:var(--serif-en);font-weight:400;font-style:italic;font-size:clamp(56px,8.4vw,132px);line-height:.88;letter-spacing:-.01em;color:var(--ink)}
+  .main p{font-family:var(--serif-ko);font-weight:300;font-size:clamp(16px,1.5vw,20px);margin:26px 0 8px;color:var(--ink)}
+  .main .meta{font-size:13px;letter-spacing:.08em;color:var(--ink-soft);margin-bottom:36px}
+  .main figure{position:relative;overflow:hidden}
+  .main figure img{position:absolute;inset:0;object-position:50% 50%;transform:scale(1.04);animation:settle 2.4s ease-out forwards}
+  @keyframes settle{to{transform:scale(1)}}
+  @media (max-width:900px){
+    .main{grid-template-columns:1fr;min-height:auto}
+    .main figure{order:-1;aspect-ratio:4/5}
+    .main .text{padding:44px var(--gutter) 64px}
+  }
+
+  /* 공통 */
+  section{padding:clamp(88px,13vw,180px) var(--gutter)}
+  .eyebrow{font-family:var(--serif-en);font-style:italic;font-size:18px;color:var(--ink-soft);letter-spacing:.02em;margin-bottom:18px;display:block}
+  h2{font-family:var(--serif-ko);font-weight:400;font-size:clamp(28px,3.6vw,46px);line-height:1.4;letter-spacing:-.01em}
+  .lead{font-size:clamp(16px,1.25vw,18px);color:var(--ink-soft);max-width:34em;margin-top:28px}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* 소개 */
+  .intro{display:grid;grid-template-columns:1fr;gap:clamp(40px,7vw,120px);align-items:end}
+  .intro .photo{aspect-ratio:4/5}
+  .stats{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1.25fr;border-top:1px solid var(--line);margin-top:clamp(64px,8vw,110px)}
+  .stats div{padding:28px 0 0;border-right:1px solid var(--line);padding-left:24px}
+  .stats div:first-child{padding-left:0}
+  .stats div:last-child{border-right:0}
+  .stats b{display:block;font-family:var(--serif-en);font-weight:400;font-size:clamp(34px,4vw,54px);line-height:1;white-space:nowrap;font-variant-numeric:lining-nums}
+  .stats span{font-size:14px;color:var(--ink-soft);display:block;margin-top:10px}
+
+  /* 45m 동선 */
+  .walk-photo{width:min(300px,62vw);aspect-ratio:3/4;margin-right:clamp(16px,9vw,150px)}
+  .walk{padding:0;display:grid;grid-template-columns:1fr auto;align-items:center;background:var(--paper-2)}
+  .walk .photo{min-height:60vh}
+  .walk .text{padding:clamp(56px,8vw,120px) var(--gutter);display:flex;flex-direction:column;justify-content:center}
+  .big-num{font-family:var(--serif-en);font-size:clamp(90px,13vw,190px);line-height:.85;font-weight:400;color:var(--pine)}
+  .big-num small{font-size:.35em;font-style:italic;margin-left:6px}
+
+  /* 꽃 */
+  .flowers-head{display:grid;grid-template-columns:1fr minmax(0,620px);gap:clamp(40px,7vw,120px);align-items:center}
+  .flowers-photo{aspect-ratio:1170/1132}
+  .palette{display:flex;gap:10px;margin-top:28px;align-items:center;font-size:13px;color:var(--ink-soft)}
+  .palette i{width:26px;height:26px;border-radius:50%;border:1px solid var(--line)}
+
+  /* 예식 스타일 */
+  .styles{background:var(--night);color:#EDE8DE}
+  .styles .eyebrow{color:#A6ADA8}
+  .style-list{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,36px);margin-top:clamp(48px,6vw,80px)}
+  .style-list article .photo{aspect-ratio:1/1;overflow:hidden;margin-bottom:24px}
+  .style-list .rain{display:flex;align-items:center;justify-content:center;border:1px solid #3A4140;background:#1B2022}
+  .style-list .rain span{font-family:var(--serif-en);font-style:italic;font-size:clamp(40px,4vw,60px);line-height:1;color:#C9CEC8;text-align:center}
+  .style-list h3{font-family:var(--serif-ko);font-weight:400;font-size:22px}
+  .style-list .time{font-family:var(--serif-en);font-style:italic;font-size:17px;color:#A6ADA8;display:block;margin:4px 0 12px}
+  .style-list p{font-size:15px;color:#C3C7C1}
+
+  /* 패키지 */
+  .pkg-list{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);margin-top:clamp(48px,6vw,80px)}
+  .pkg{padding:36px 32px 40px 0;border-right:1px solid var(--line)}
+  .pkg + .pkg{padding-left:32px}
+  .pkg:last-child{border-right:0}
+  .pkg h3{font-family:var(--serif-en);font-weight:500;font-size:30px;letter-spacing:.06em}
+  .pkg .sub{font-size:14px;color:var(--ink-soft);margin:6px 0 22px}
+  .pkg ul{list-style:none;font-size:15px}
+  .pkg li{padding:9px 0;border-bottom:1px solid var(--line)}
+  .included{margin-top:48px;padding:28px 32px;background:var(--paper-2);font-size:15px;color:var(--ink-soft);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+  .included strong{color:var(--ink);font-weight:500}
+
+  /* 갤러리 */
+  .gallery{padding-left:0;padding-right:0}
+  .gallery .head{padding:0 var(--gutter)}
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:clamp(40px,5vw,64px) var(--gutter) 0}
+  .strip figure{aspect-ratio:3/4}
+
+  /* 안내 */
+  .info{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,120px);border-top:1px solid var(--line)}
+  .info dl{display:grid;grid-template-columns:110px 1fr;row-gap:18px;margin-top:36px;font-size:15px}
+  .info dt{color:var(--ink-soft)}
+  .times{list-style:none}
+  .times li{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:6px 0}
+  .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:40px}
+
+  /* 마지막 */
+  .closing{position:relative;color:#fff;text-align:center;padding:0;height:86vh;min-height:520px;overflow:hidden}
+  .closing img{position:absolute;inset:0}
+  .closing::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,12,.6) 0%,rgba(10,12,12,.45) 48%,rgba(10,12,12,.05) 78%)}
+  .closing .inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:clamp(72px,12vh,120px) var(--gutter) 0}
+  .closing img{object-position:50% 18%}
+  @media (min-width:901px){
+    .closing{height:auto;min-height:0;background:var(--night);display:grid;grid-template-columns:1fr minmax(0,44vw);text-align:left}
+    .closing img{position:static;order:2;height:min(92vh,860px);object-position:50% 78%}
+    .closing::after{display:none}
+    .closing .inner{order:1;align-items:flex-start;justify-content:center;padding:0 var(--gutter)}
+  }
+  .closing .btn{background:rgba(255,255,255,.92);color:var(--ink);border-color:transparent}
+  .closing .btn:hover{background:#fff}
+  .closing h2{font-family:var(--serif-en);font-style:italic;font-size:clamp(44px,7vw,96px);line-height:1}
+  .closing p{font-family:var(--serif-ko);font-weight:300;margin:22px 0 36px;font-size:clamp(15px,1.4vw,18px)}
+
+  footer{padding:40px var(--gutter);font-size:13px;color:var(--ink-soft);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line)}
+  footer .logo{color:var(--ink);font-size:22px}
+
+  /* 휴대폰 고정 상담 버튼 */
+  .float-cta{display:none}
+
+  @media (max-width: 900px){
+    .menu-btn{display:block;margin-right:-10px}
+    .nav ul{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:4px var(--gutter) 16px}
+    .nav.open ul{display:flex}
+    .nav.open{background:var(--paper)}
+    .nav ul a{display:block;padding:15px 0;font-family:var(--serif-ko);font-size:17px;opacity:1}
+    .nav li + li{border-top:1px solid var(--line)}
+    .nav .btn{padding:9px 16px;font-size:13px}
+    .intro,.walk,.info{grid-template-columns:1fr}
+    .walk .text{padding-bottom:32px}
+    .walk-photo{margin:0 var(--gutter) 64px;width:min(240px,58vw)}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .stats div:last-child{grid-column:1/-1}
+    .stats div{padding:24px 0 24px 18px;border-bottom:1px solid var(--line)}
+    .stats div:nth-child(2n){border-right:0}
+    .stats div:nth-child(2n+1){padding-left:0}
+    .flowers-head{grid-template-columns:1fr}
+    .strip{grid-template-columns:1fr 1fr;gap:8px}
+    .style-list,.pkg-list{grid-template-columns:1fr}
+    .style-list article{margin-bottom:28px}
+    .pkg,.pkg + .pkg{padding:30px 0;border-right:0;border-bottom:1px solid var(--line)}
+    .hero .meta{text-align:left}
+    .info dl{grid-template-columns:90px 1fr}
+    .float-cta{display:flex;position:fixed;left:16px;right:16px;bottom:16px;z-index:30;justify-content:center;background:var(--ink);color:var(--paper);padding:15px;font-size:15px;letter-spacing:.04em;box-shadow:0 8px 24px rgba(0,0,0,.18);transform:translateY(120%);transition:transform .4s}
+    .float-cta.show{transform:none}
+    footer{padding-bottom:96px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .hero img{animation:none;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#top" class="logo">Mille de fleur</a>
+  <ul id="menu">
+    <li><a href="#garden">공간</a></li>
+    <li><a href="#flowers">꽃</a></li>
+    <li><a href="#styles">예식</a></li>
+    <li><a href="#package">패키지</a></li>
+    <li><a href="#visit">오시는 길</a></li>
+  </ul>
+  <div class="nav-right">
+    <a class="btn kakao" href="#visit">상담 예약</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+  </div>
+</header>
+
+
+<section class="main" id="top" aria-label="밀드플레">
+  <div class="text">
+    <h1>Mille<br>de fleur</h1>
+    <p>대전 야외웨딩만을 위한 유일한 베뉴</p>
+    <span class="meta">대전 유성 · 하루 한 팀 · 2027 예약 중</span>
+    <div><a class="btn fill kakao" href="#visit">상담 예약</a></div>
+  </div>
+  <figure><img src="main.jpg" alt="소나무 숲 앞, 장미와 들풀로 채운 아치와 꽃길"></figure>
+</section>
+
+<section id="garden">
+  <div class="intro">
+    <div class="reveal">
+      <span class="eyebrow">The Garden</span>
+      <h2>소나무 숲 곁의 정원,<br>모두가 편안한 예식</h2>
+      <p class="lead">밀드플레는 대전 유성 소나무 숲 곁의 야외 웨딩 베뉴입니다. 2,000평 잔디마당에서 봄과 가을, 하루에 한 팀의 예식만 올립니다. 공간을 내어드리는 데서 그치지 않고 입장부터 마지막 인사까지, 두 분과 가족 모두가 편안하도록 하루의 흐름을 함께 만듭니다.</p>
+    </div>
+  </div>
+  <div class="stats reveal">
+    <div><b>2,000</b><span>평 잔디마당</span></div>
+    <div><b>1</b><span>하루 한 팀</span></div>
+    <div><b>45m</b><span>입장 동선</span></div>
+    <div><b>4h</b><span>여유로운 대관 시간</span></div>
+    <div><b>80–500</b><span>명 수용</span></div>
+  </div>
+</section>
+
+<section class="walk" aria-label="45미터의 입장">
+  <div class="text reveal">
+    <span class="eyebrow">The Walk</span>
+    <div class="big-num">45<small>m</small></div>
+    <h2 style="margin-top:28px">걸어 들어오는 순간부터</h2>
+    <p class="lead">건물에서 정원 입구까지 이어지는 45미터. 아버지가 길 중간에서 신부를 맞이하기도 하고, 신랑이 함께 걸어 들어오기도 합니다. 긴 동선이 만드는 기다림과 설렘이 밀드플레 예식의 첫 장면이 됩니다.</p>
+  </div>
+  <figure class="walk-photo reveal"><img src="house-walk2.jpg" alt="밀드플레 건물 앞 잔디를 걸어 나오는 신랑 신부" loading="lazy"></figure>
+</section>
+
+<section id="flowers">
+  <div class="flowers-head">
+    <div class="reveal">
+      <span class="eyebrow">Flowers</span>
+      <h2>꽃으로 완성하는 정원</h2>
+      <p class="lead">플로리스트이자 크리에이티브 디렉터인 대표가 모든 예식의 꽃을 디렉팅합니다. 오직 생화로, 그날의 두 사람만을 위한 무드를 완성합니다.</p>
+    </div>
+    <figure class="flowers-photo reveal"><img src="flowers-arch.jpg" alt="소나무 숲 앞 흰 꽃 아치와 꽃길" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="styles" id="styles">
+  <div class="reveal">
+    <span class="eyebrow">Ceremony</span>
+    <h2>햇살 아래, 달빛 아래</h2>
+  </div>
+  <div class="style-list">
+    <article class="reveal">
+      <figure class="photo"><img src="day2.jpg" alt="햇살 아래 잔디마당의 샴페인 타워와 꽃 아치" loading="lazy" style="object-position:50% 62%"></figure>
+      <h3>낮 예식</h3>
+      <span class="time">Sat 12:00 · Sun 12:00</span>
+      <p>소나무 사이로 쏟아지는 자연광 아래, 잔디마당 위에서 올리는 예식입니다. 낮에도 2부 파티를 이어갈 수 있습니다.</p>
+    </article>
+    <article class="reveal">
+      <figure class="photo"><img src="evening-garden.jpg" alt="해 질 녘 전구 아래 차려진 긴 테이블" loading="lazy"></figure>
+      <h3>이브닝 파티 웨딩</h3>
+      <span class="time">16:00 – 18:30</span>
+      <p>가까운 사람들과 저녁을 함께 보내는 파티 스타일 웨딩입니다. 40인부터 72인까지 함께할 수 있습니다.</p>
+    </article>
+    <article class="reveal">
+      <figure class="photo"><img src="rain-tent2.jpg" alt="전구를 단 투명 천막 아래 꽃길과 라탄 의자" loading="lazy"></figure>
+      <h3>비 오는 날</h3>
+      <span class="time">Rain or shine</span>
+      <p>비가 오면 대형 천막과 실내 공간에서 예식을 이어갑니다. 빗속에서 더 특별해진 하루를 여러 번 함께했습니다.</p>
+    </article>
+  </div>
+</section>
+
+<section id="package">
+  <div class="reveal">
+    <span class="eyebrow">2027 Package</span>
+    <h2>세 가지 패키지</h2>
+  </div>
+  <div class="pkg-list reveal">
+    <div class="pkg">
+      <h3>BASIC</h3>
+      <p class="sub">밀드플레의 기본 연출</p>
+      <ul>
+        <li>비대칭 아치 또는 플로어 스타일</li>
+        <li>포토 테이블 · 신부대기실 · 입간판 장식</li>
+        <li>화촉점화 또는 샌드 세리머니</li>
+        <li>플라워 샤워 · 손님용 꽃포장</li>
+      </ul>
+    </div>
+    <div class="pkg">
+      <h3>SIGNATURE</h3>
+      <p class="sub">풀 라운드 아치로 완성하는 정원</p>
+      <ul>
+        <li>풀 라운드 아치 연출</li>
+        <li>포토 테이블 · 신부대기실 · 입간판 장식</li>
+        <li>화촉점화 또는 샌드 세리머니</li>
+        <li>플라워 샤워 · 손님용 꽃포장</li>
+      </ul>
+    </div>
+    <div class="pkg">
+      <h3>PERSONAL</h3>
+      <p class="sub">대표가 직접 디렉팅하는 단 하나의 예식</p>
+      <ul>
+        <li>메인 아치 디자인 개인 선택</li>
+        <li>화촉 · 샌드 · 식수 세리머니 중 선택</li>
+        <li>예식 컨셉 맞춤 연출</li>
+        <li>대표 디렉팅</li>
+      </ul>
+    </div>
+  </div>
+  <div class="included reveal">
+    <span><strong>모든 패키지 포함</strong> · 대관 · 예식 전체 디렉팅 · 음향 · 플라워 연출 · 웰컴드링크 · 테이블과 의자 · 파라솔 · 우천 용품 · 접수대 물품 · 주차 안내</span>
+    <span>금액과 옵션은 상담에서 안내해 드립니다.</span>
+  </div>
+</section>
+
+
+<section class="gallery" aria-label="갤러리">
+  <div class="head reveal">
+    <span class="eyebrow">Moments</span>
+    <h2>밀드플레 풍경</h2>
+  </div>
+  <div class="strip">
+    <figure><img src="scene-spring.jpg" alt="봄 햇살 아래 원목 테이블 위 분홍 꽃과 밀드플레 건물" loading="lazy"></figure>
+    <figure><img src="scene-drinks.jpg" alt="정원 손수레와 양동이에 담긴 시원한 음료" loading="lazy"></figure>
+    <figure><img src="night-table.jpg" alt="밤 숲속 전구 아래 긴 테이블과 샴페인 잔" loading="lazy"></figure>
+    <figure><img src="scene-night.jpg" alt="전구 아래 밤 정원의 디저트 테이블" loading="lazy"></figure>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="info">
+    <div class="reveal">
+      <span class="eyebrow">Visit</span>
+      <h2>상담은 예약제로<br>진행합니다</h2>
+      <p class="lead">카카오톡 채널 ‘밀드플레’로 편하게 문의해 주세요. 희망하시는 예식 날짜와 하객 인원을 함께 남겨주시면 더 빠르게 안내해 드립니다.</p>
+      <div class="actions">
+        <a class="btn fill kakao" href="#" target="_blank" rel="noopener">카카오톡 상담 예약</a>
+        <a class="btn" href="https://www.instagram.com/milledefleur_/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <dl>
+        <dt>예식 시간</dt>
+        <dd>
+          <ul class="times">
+            <li><span>토요일</span><span>12:00 또는 17:00 중 선택</span></li>
+            <li><span>일요일</span><span>12:00</span></li>
+          </ul>
+          <p style="margin-top:8px;font-size:14px;color:var(--ink-soft)">하루 한 팀만 진행합니다.</p>
+        </dd>
+        <dt>상담 시간</dt><dd>12:00 – 19:00 · 월, 화 휴무</dd>
+        <dt>예약</dt><dd>2027 예약 중</dd>
+        <dt>주소</dt><dd>대전광역시 유성구 하기로56번길 110-10<br>(하기동 146-6)<br><a href="https://map.naver.com/p/search/%EB%8C%80%EC%A0%84%20%EC%9C%A0%EC%84%B1%EA%B5%AC%20%ED%95%98%EA%B8%B0%EB%A1%9C56%EB%B2%88%EA%B8%B8%20110-10" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:4px">네이버 지도에서 보기</a></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="closing" aria-label="상담 예약">
+  <img src="consult.jpg" alt="잔디마당 위 샴페인 타워 테이블" loading="lazy">
+  <div class="inner">
+    <h2>The day, remembered</h2>
+    <p>함께한 모두에게 평생 기억될 선물 같은 하루,<br>밀드플레가 만들어 드립니다.</p>
+    <a class="btn light kakao" href="#" target="_blank" rel="noopener">상담 예약하기</a>
+  </div>
+</section>
+
+<footer>
+  <span class="logo">Mille de fleur</span>
+  <span>(주) 밀드플레 · 대전광역시 유성구 하기로56번길 110-10 · 카카오톡 채널 @밀드플레 · Instagram @milledefleur_</span>
+</footer>
+
+<a class="float-cta kakao" id="floatCta" href="#" target="_blank" rel="noopener">카카오톡 상담 예약</a>
+
+<script>
+  // 카카오톡 채널 주소를 여기에 넣으면 모든 상담 버튼에 적용돼요. 예: https://pf.kakao.com/_xxxxxx/chat
+  const KAKAO_URL = "https://pf.kakao.com/_zKkjG/chat";
+  document.querySelectorAll('.kakao').forEach(a => {
+    if (KAKAO_URL) a.href = KAKAO_URL; else { a.href = '#visit'; a.removeAttribute('target'); }
+  });
+
+  const nav = document.getElementById('nav');
+  const cta = document.getElementById('floatCta');
+  const onScroll = () => {
+    const y = window.scrollY, h = window.innerHeight;
+    nav.classList.add('solid');
+    cta.classList.toggle('show', y > h * 0.9);
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  const menuBtn = document.getElementById('menuBtn');
+  const setMenu = open => {
+    nav.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+  };
+  menuBtn.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+  document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('click', e => { if (!nav.contains(e.target)) setMenu(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  }), {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
